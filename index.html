@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+             font-family:Arial, Helvetica, sans-serif
+        }
+        .hero{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.521);
+            /* background-image: url(banner.jpg); */
+            /* background-size: cover;
+            background-position: center; */
+         
+        }
+        .hero img{
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+
+        }
+        
+        
+        .hero nav{
+            width: 50px;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(9, 42, 67);
+            align-items: center;
+            gap: 20px;
+            padding-top:25px ;
+
+        }
+        nav a{
+            text-decoration: none;
+            color:white;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 250px;
+            color: white;
+            gap:20px;
+            
+        }
+        .content button{
+            width: 100px;
+            padding: 7px;
+            background-color:gray;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .content button:hover{
+transition: 1s;
+transform: scale(1.1);
+background-color: rgba(0, 0, 0, 0.352);
+        }
+        
+.new{
+         width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+}
+.new h1{
+    margin-top:0;
+}
+.line{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    margin-top: 10px;
+    margin-left: 50px;
+
+}
+.line img{
+    width: 200px;
+
+}
+.new button{
+      width: 100px;
+            padding: 7px;
+            background-color: rgb(70, 132, 255);
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(215, 215, 215);
+    gap:50px;
+}
+
+.part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  
+
+}
+.part p{
+    width: 200px;
+    font-size: 10px;
+    /* margin-bottom: 20px; */
+}
+.part .icons a{
+    color: rgb(70, 132, 255) ;
+    /* margin-top: 10px; */
+}
+
+.part form{
+    
+    display: flex;
+padding: 10px;
+    flex-direction: column;
+    gap:10px;
+}
+.part form input{
+    width:300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.part form button{
+            border-radius: 5px;
+            padding: 7px;
+            background-color: rgb(70, 132, 255);
+            color: white;
+            border: none;
+            cursor: pointer;
+          
+}
+
+.part form textarea{
+      border: none;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    font-size: 12px;
+}
+
+
+@media screen and (max-width:700px) {
+    /* .hero{
+        width: 90%;
+    }
+    .hero img{
+        width: 90%;
+    } */
+    .hero .content{
+        font-size: 7px;
+    }
+   .new{
+    font-size: 10px;
+height: 100%;   
+
+
+   }
+   
+    .line{
+        
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.line img{
+    width: 100%;
+}
+.about{
+    height: 950px;
+    flex-wrap: wrap;
+    
+}
+.line img{
+    width: 250px;
+}
+.new button{
+    margin: 50px;
+    
+}
+
+.about{
+    font-size: 10px;
+}
+.about p{
+    margin-left: 50px;
+}
+.part form input , .part form label  {
+    margin-left: 50px;
+    width:200px;
+    padding: 10px;
+   
+}
+
+.part form textarea{
+        margin-left: 50px;
+        padding: 20px;
+
+}
+
+.part form button{
+    margin-left: 50px;
+            padding: 5px;
+            
+          
+}
+footer{
+    font-size: 8px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+
+}
+    </style>
+</head>
+<body>
+    <section class="hero">
+<img src="banner.jpg">
+        <header>
+            <nav>
+                <a href="#"><i class="fa-solid fa-house"></i></a>
+                <a href="#new"><i class="fa-solid fa-camera"></i></a>
+                <a href="#about"><i class="fa-solid fa-file"></i></a>
+            </nav>
+        </header>
+
+        <div class="content">
+            <h1>Hey! I'm Snapshot</h1>
+            <p>A fully responsive gallery template by <a href="" style="color: rgb(70, 132, 255); text-decoration: none;">TEMPLATED</a> </p>
+            <button>Continue</button>
+        </div>
+    </section>
+<section id="new" class="new">
+    <h1>What's New</h1>
+    <div class="line">
+        <img src="01.jpg" alt="pic">
+        <img src="05.jpg" alt="pic">
+        <img src="09.jpg" alt="pic">
+        <img src="02.jpg" alt="pic">
+    </div>
+
+    <div class="line">
+        <img src="06.jpg" alt="pic">
+        <img src="10.jpg" alt="pic">
+        <img src="03.jpg" alt="pic">
+        <img src="07.jpg" alt="pic">
+    </div>
+
+    <button>Full Gallery</button>
+</section>
+
+<section id="about" class="about">
+
+
+    <div class="part">
+        <h3>About me</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A sequi cum obcaecati unde quibusdam praesentium, modi perspiciatis sint nulla velit fugit tenetur explicabo recusandae quas sunt maxime laboriosam magni alias.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure provident commodi nostrum architecto sunt, consequatur molestiae ipsa voluptates temporibus sit eveniet obcaecati amet suscipit maiores dolore ullam eos. Dolorum, reiciendis?
+        Eaque accusantium quibusdam nisi officiis animi nam eum dignissimos cum iusto consequuntur commodi soluta harum dolorum repudiandae neque iure ipsa, omnis nostrum id impedit minima unde necessitatibus! Impedit, ea doloremque.</p>
+        <h3>Follow me</h3>
+        <div class="icons">
+              
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+    </div>
+
+
+
+     <div class="part">
+        <h3>Get in touch</h3>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name">
+            <label for="name">email</label>
+             <input type="email" placeholder="Email">
+             <label for="name">message</label>
+             <textarea name="message" id="message"></textarea>
+             <button>send message</button>
+
+
+        </form>
+    </div>
+
+</section>
+<footer>
+<i class="fa-solid fa-copyright"></i>
+<p>Untitled Design: <p style="color: rgb(70, 132, 255) "; > TEMPLATED.</p>Images:<p style="color: rgb(70, 132, 255) ";>Unsplash.</p></p>
+
+</footer>
+    
+</body>
+</html>
